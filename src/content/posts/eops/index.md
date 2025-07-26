@@ -18,7 +18,7 @@ draft: false
 ![网站截图](./Image/10.png)
 出现此页面后点击分享至X或Facebook，可以点击访问后立马返回喵
 
-![网站截图](./Image/10.png)
+![网站截图](./Image/9.png)
 这样就算获取成功啦
 
 ## 创建Fuwari仓库模板
