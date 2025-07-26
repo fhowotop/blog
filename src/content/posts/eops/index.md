@@ -35,7 +35,7 @@ draft: false
 ![网站截图](./Image/14.png)
 同意后到达此页面，点击你在Github创建的仓库名称
 
-![网站截图](./Image/14.png)
+![网站截图](./Image/15.png)
 这里框架预设是Astro，构建命令和安装命令的*npm*改成*pnpm*，点击开始部署，部署完成就能预览进去看看了，写文章就Git或上传到你的仓库路径src/content/posts/就可以啦喵，改配置文件到 src/content/config.ts 这个路径，可以先看看网站里面的文章示例，可以帮助你快速了解Fuwari喵～
 
 ## 自定义域名
