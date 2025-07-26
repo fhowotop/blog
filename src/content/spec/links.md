@@ -24,4 +24,4 @@ draft: false
 
 | 名称 | 描述 | 头像 |
 |---|---|---|
-| [风绘的小窝](https://fhowo.top) | 欲买桂花同载酒，终不似，少年游。 | <img src="https://q1.qlogo.cn/g?b=qq&nk=3986554524&s=640" width="64" style="max-width: 100%; border-radius: 4px;"> |
+| [风绘的小窝](https://fhowo.top) | 欲买桂花同载酒，终不似，少年游。 | <img src="https://q1.qlogo.cn/g?b=qq&nk=3986554524&s=640" width="64" style="vertical-align:middle; border-radius:4px;"> |
