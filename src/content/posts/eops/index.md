@@ -10,7 +10,7 @@ draft: false
 
 > 此教程可能对其他静态博客、文档、框架同样适用，可以参考。
 
-##获取Edgeone
+# 获取Edgeone
 
 ![网站截图](./Image/11.png)
 如果您已经获取了Edgeone可跳过这一步，[Edgeone](https://edgeone.ai/zh/get-free-plan)新获取方案，登录注册后点击测速，过程一分钟，耐心等待即可喵。
