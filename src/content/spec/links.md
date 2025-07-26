@@ -22,6 +22,6 @@ draft: false
 - 你的站点需在中国大陆能够正常访问，并且不可含有违法内容喵
 - 你的站点须部署SSL证书即HTTPS
 
-| 名称 | 描述 | 头像 |
+| 头像 | 名称 | 描述 |
 |---|---|---|
-| [风绘的小窝](https://fhowo.top) | 欲买桂花同载酒，终不似，少年游。 | <img src="https://q1.qlogo.cn/g?b=qq&nk=3986554524&s=640" width="64" style="vertical-align:middle; border-radius:4px;"> |
+| <div style="text-align:center;"><img src="https://q1.qlogo.cn/g?b=qq&nk=3986554524&s=640" width="48" style="border-radius:4px;"></div> | [风绘的小窝](https://fhowo.top) | 欲买桂花同载酒，终不似，少年游。 |
