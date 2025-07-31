@@ -16,12 +16,32 @@ const { Content } = await render(friendsPost)
 
 const items = [
   {
-    title: 'Astro',
+    title: '风绘的小窝',
+    imgurl: 'https://q4.qlogo.cn/g?b=qq&nk=3986554524&s=640',
+    desc: '欲买桂花同载酒，终不似，少年游',
+    siteurl: 'https://fhowo.top',
+    tags: ['标签：Blog'],
+  {
+    title: 'NorthZero',
+    imgurl: 'https://www.nzdnzd.top/assets/img/avatar.webp',
+    desc: 'o_O',
+    siteurl: 'https://www.nzdnzd.top/',
+    tags: ["标签：Blog"],
+  },
+  {
+    title: 'susu',
+    imgurl: 'https://q4.qlogo.cn/g?b=qq&nk=1503366755&s=640',
+    desc: '暂无描述',
+    siteurl: 'https://susu.icu',
+    tags: ['标签：Blog'],
+  },
+  {
+    title: '午夜的Blog',
     imgurl: 'https://docs.astro.build/favicon.ico',
-    desc: 'Astro',
-    siteurl: 'https://astro.build/',
-    tags: ['框架'],
-  }
+    desc: '用代码表达言语的魅力，用代码书写山河的壮丽。',
+    siteurl: '用代码表达言语的魅力，用代码书写山河的壮丽。',
+    tags: ['标签：Blog'],
+  },
 ]
 ---
 <MainGridLayout title={i18n(I18nKey.friends)} description={i18n(I18nKey.friends)}>
