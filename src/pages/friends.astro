@@ -7,6 +7,11 @@ import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 // 导入friends.md
 const friendsPost = await getEntry('spec', 'friends')
+
+if (!friendsPost) {
+	throw new Error("Friends page content not found");
+}
+
 const { Content } = await friendsPost.render()
 const items = [
   {
