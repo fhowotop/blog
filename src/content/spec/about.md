@@ -1,9 +1,33 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# 关于小窝
 
-::github{repo="saicaca/fuwari"}
+**风绘的小窝**在2025年7月25日清晨搭建完成。那天早上，风绘有种前所未有的新鲜感，嘿嘿。小窝也叫做**Fhowo小窝**，使用了以Astro静态站点生成器开发的[Fuwari](https://github.com/saicaca/fuwari)作为模板，并由EdgeOne Pages提供部署支持。
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+创建小窝的初衷，是想当做随记站点、分享技术，以及记录生活的站点；在研究与分享的过程中，我也能学到新知识，形成独特的见解。
+
+小窝的前身是老牌博客平台WordPress。因为感觉它体积大、加载慢，于是想找一个更流畅、简洁的替代品。经过一段时间的摸索，终于发现了现在用的Fuwari-Astro模板，又花了些时间研究部署方法，才有了今天的样子。
+
+至于域名为什么叫*fhowo.top*？因为OwO很可爱嘿嘿，喵喵喵～
+
+---
+
+# 关于我
+
+我的昵称是**风绘**，当初灵光一闪就起了这个名字。头像嘛，是Gal《巧克甜恋》里的角色**雪村千绘莉**，可爱吧～
+
+2024年暑假前夕，我第一次开了一个Minecraft纯生存服，这也成为我学习计算机技术的起点。最初用的是虚拟主机，后来尝试了GitHub上一款支持全自动部署的博客模板[Gmeek](https://github.com/Meekdai/Gmeek)。再后来，又转到某位大佬的免费搭建WordPress平台，最终自己买了云服务器，一路折腾到今天的静态博客。过程很长，但始终执着于找到一款既流畅又简洁美观的模板，喵喵～
+
+开MC服已经有一年半经验，多数在Paper、Leaves这类插件服上。管理服务器的途中让我学会了*Markdown、AI、GitHub*和服务器面板等工具的使用，至今仍在不断学习。什么？你问怎么没有*Java、JavaScript、Vue、NodeJS*？没错，风绘还没开始学这些语言OwO，如果有人愿意教，我很乐意尝试（
+
+不问问风绘的年龄吗？（傲娇）风绘今年 15 岁，男孩子！怎么样，是不是有点厉害？什么？“一点都不厉害，现在都有初高中生开发搜索引擎、操作系统、编程语言了，你算啥（bushi）”…… 好吧好吧，我会虚心请教的！总之，欢迎一起交流、一起学习，也感谢计算机路上各位大佬的栽培与支持，喵～
+
+---
+
+# 其他信息
+
+## 版权信息与转载许可喵
+
+本站 [风绘的小窝](https://fhowo.top) 的所有文章、界面（另有声明的除外）均在 [署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) 许可协议下提供。若需转载，请注明来源（“风绘的小窝”或原文链接），且不得用于任何商业用途。
+
+## 关于文章错误信息喵
+
+> 小窝里发现了“虫子”？如果有，请在本喵小窝的GitHub仓库提交 [issue](https://github.com/fhowotop/blog/issues)，拜托啦喵～
