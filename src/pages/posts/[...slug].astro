@@ -108,6 +108,7 @@ const jsonLd = {
             </Markdown>
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
+<Giscus repo="fhowotop/blog" repoId="R_kgDOPbVH4A" category="Announcements" categoryId="DIC_kwDOPbVH4M4CuAoc" />
         </div>
     </div>
 
@@ -121,8 +122,6 @@ const jsonLd = {
                 </div>
             </div>}
         </a>
-
-<Giscus repo="fhowotop/blog" repoId="R_kgDOPbVH4A" category="Announcements" categoryId="DIC_kwDOPbVH4M4CuAoc" />
 
         <a href={entry.data.prevSlug ? getPostUrlBySlug(entry.data.prevSlug) : "#"}
            class:list={["w-full font-bold overflow-hidden active:scale-95", {"pointer-events-none": !entry.data.prevSlug}]}>
