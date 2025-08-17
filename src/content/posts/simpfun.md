@@ -25,4 +25,4 @@ image: ./images/simpfun.webp
 
 - 点击下方链接即可跳转到官网注册喵
 
-<https://simpfun.cn/auth?type=register&code=298401074>
+https://simpfun.cn/auth?type=register&code=298401074
