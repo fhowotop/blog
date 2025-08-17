@@ -65,6 +65,7 @@ image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
 draft: false
+pinned: false
 lang: id   # Isi hanya jika bahasa postingan berbeda dari bahasa default di `config.ts`
 ---
 ```

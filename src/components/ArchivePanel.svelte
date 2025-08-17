@@ -4,6 +4,7 @@ import { onMount } from "svelte";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import { getPostUrlBySlug } from "../utils/url-utils";
+import { Icon } from "astro-icon/components";
 
 export let tags: string[];
 export let categories: string[];
@@ -133,6 +134,10 @@ onMount(async () => {
                      group-hover:translate-x-1 transition-all group-hover:text-[var(--primary)]
                      text-75 pr-8 whitespace-nowrap overflow-ellipsis overflow-hidden"
                         >
+{post.data.pinned &&
+                                        <Icon class="inline-block text-[1rem] text-[var(--primary)] mr-1 align-middle translate-y-[-1px]" name="material-symbols:push-pin" />
+                                    }
+
                             {post.data.title}
                         </div>
 
