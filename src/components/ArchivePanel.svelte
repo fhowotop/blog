@@ -22,7 +22,6 @@ interface Post {
 		tags: string[];
 		category?: string;
 		published: Date;
-		pinned?: boolean;
 	};
 }
 
