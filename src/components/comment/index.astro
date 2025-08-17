@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import Giscus from './Giscus.svelte'
+
+interface Props {
+  post: CollectionEntry<'posts'>
+}
+
+const { slug } = Astro.props.post
+const path = `/posts/${slug}`
+const url = `${Astro.site?.href}${path}`
+---
+
+<div class="card-base p-6 mb-4">
+  <Giscus client:only="svelte" />
+</div>

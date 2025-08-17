@@ -84,8 +84,31 @@ export const licenseConfig: LicenseConfig = {
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
 
+export const commentConfig: CommentConfig = {
+  // disqus: {
+  //   shortname: 'fuwari',
+  // },
+  giscus: {
+    repo: 'fhowotop/blog',
+    repoId: 'R_kgDOPbVH4A',
+    category: 'Announcements',
+    categoryId: 'DIC_kwDOPbVH4M4CuAoc',
+    mapping: 'title',
+    strict: '0',
+    reactionsEnabled: '1',
+    emitMetadata: '0',
+    inputPosition: 'top',
+    theme: 'preferred_color_scheme',
+    lang: 'zh-CN',
+    loading: 'lazy',
+  },
+
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
 	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
 	// Please select a dark theme, as this blog theme currently only supports dark background color
 	theme: "github-dark",
 };
+
+
+
+  <script src="https://giscus.app/client.js" data-repo="fhowotop/blog" data-repo-id="R_kgDOPbVH4A" data-category="Announcements" data-category-id="DIC_kwDOPbVH4M4CuAoc" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async> </script>
