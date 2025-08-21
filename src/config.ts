@@ -66,6 +66,11 @@ export const profileConfig: ProfileConfig = {
 			url: "https://qm.qq.com/q/D0gRIv8bCM",
 		},
 		{
+			name: "Telegram",
+			icon: "fa6-brands:telegram",
+			url: "https://t.me/fhowo",
+		},
+		{
 			name: "Bilibili",
 			icon: "fa6-brands:bilibili",
 			url: "https://b23.tv/X5E4rg5",
