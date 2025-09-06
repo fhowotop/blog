@@ -10,13 +10,13 @@ import { LinkPreset } from "./types/config";
 export const siteConfig: SiteConfig = {
 	title: "风绘的小窝",
 	subtitle: "这里是猫猫风绘的随记小窝，风绘学到有趣的技术就在这里分享，很高兴您访问风绘的小窝喵！",
-	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
-		enable: false, // Display the banner image on the top of the home page and post pages
+		enable: false,
 		src: "assets/images/demo-banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
@@ -43,6 +43,7 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
+		LinkPreset.Friends,
 		LinkPreset.About,
 		{
 			name: "GitHub",
@@ -62,12 +63,17 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:qq", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://qm.qq.com/q/4CSSSjIOzu",
+			url: "https://qm.qq.com/q/D0gRIv8bCM",
+		},
+		{
+			name: "Telegram",
+			icon: "fa6-brands:telegram",
+			url: "https://t.me/fhowo",
 		},
 		{
 			name: "Bilibili",
 			icon: "fa6-brands:bilibili",
-			url: "https://b23.tv/RlpFptq",
+			url: "https://b23.tv/X5E4rg5",
 		},
 		{
 			name: "GitHub",
