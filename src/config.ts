@@ -9,8 +9,8 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	title: "风绘的小窝",
-	subtitle: "这里是猫猫风绘的随记小窝，风绘学到有趣的技术就在这里分享，很高兴您访问风绘的小窝喵！",
-	lang: "zh_CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.
+	subtitle: "欲买桂花同载酒，终不似，少年游",
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
@@ -63,7 +63,7 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:qq", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://qm.qq.com/q/D0gRIv8bCM",
+			url: "https://qm.qq.com/q/1CjxWMfpug",
 		},
 		{
 			name: "Telegram",
