@@ -75,11 +75,6 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:bilibili",
 			url: "https://b23.tv/09VmUVe",
 		},
-				{
-			name: "Telegram",
-			icon: "fa6-brands:telegram",
-			url: "https://t.me/fhowo",
-		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
