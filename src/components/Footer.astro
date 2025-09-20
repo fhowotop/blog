@@ -18,7 +18,7 @@ function formatUptime(startDateStr: string | undefined) {
     // 格式化开始日期为 YYYY-MM-DD
     const formattedStartDate = startDateStr.split('T')[0];
     
-    return `已运行${diffDays}天 (始于 ${formattedStartDate})`;
+    return `${diffDays}天 (始于 ${formattedStartDate})`;
 }
 ---
 
