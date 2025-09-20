@@ -25,41 +25,54 @@ function formatUptime(startDateStr: string | undefined) {
         years -= 1;
     }
 
+    // helper: convert 0-99 to Chinese numerals (basic)
+    function toChinese(n: number) {
+        const map: Record<number, string> = {
+            0: "零",
+            1: "一",
+            2: "二",
+            3: "三",
+            4: "四",
+            5: "五",
+            6: "六",
+            7: "七",
+            8: "八",
+            9: "九",
+            10: "十",
+        };
+        if (n <= 10) return map[n];
+        if (n < 20) return `十${map[n - 10] || ""}`; // 11-19
+        const tens = Math.floor(n / 10);
+        const ones = n % 10;
+        return `${map[tens]}十${ones === 0 ? "" : map[ones]}`;
+    }
+
     const parts: string[] = [];
     if (years > 0) {
         parts.push(`${toChinese(years)}年`);
-        // when years>0, show months and days if present
         if (months > 0) {
-            parts.push(`${toChinese(months)}月${days > 0 ? `${toChinese(days)}天` : ""}`);
+            // include days; if days < 10, add '零' before Chinese day
+            if (days > 0) {
+                parts.push(`${toChinese(months)}月${days < 10 ? `零${toChinese(days)}` : `${toChinese(days)}`}天`);
+            } else {
+                parts.push(`${toChinese(months)}月`);
+            }
         } else if (days > 0) {
             parts.push(`${toChinese(days)}天`);
         }
     } else if (months > 0) {
-        // no years, show months and days together (e.g., "1月12天")
-        parts.push(`${toChinese(months)}月${days > 0 ? `${toChinese(days)}天` : ""}`);
+        // no years, show months and days together
+        if (days > 0) {
+            parts.push(`${toChinese(months)}月${days < 10 ? `零${toChinese(days)}` : `${toChinese(days)}`}天`);
+        } else {
+            parts.push(`${toChinese(months)}月`);
+        }
     } else if (days > 0) {
         parts.push(`${toChinese(days)}天`);
     }
 
     if (parts.length === 0) return `0天`;
     return parts.join("");
-}
-
-// 辅助函数：将数字转换为中文数字
-function toChinese(num: number): string {
-    const digits = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
-    if (num < 10) {
-        return digits[num];
-    } else if (num === 10) {
-        return '十';
-    } else if (num < 20) {
-        return '十' + digits[num % 10];
-    } else if (num < 100) {
-        const tens = Math.floor(num / 10);
-        const ones = num % 10;
-        return digits[tens] + '十' + (ones > 0 ? digits[ones] : '');
-    }
-    return num.toString();
 }
 ---
 
