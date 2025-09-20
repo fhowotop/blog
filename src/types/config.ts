@@ -36,6 +36,8 @@ export type SiteConfig = {
 	};
 
 	favicon: Favicon[];
+	// Optional ICP record number for Chinese sites. Shown in the footer when provided.
+	icpRecord?: string;
 };
 
 export type Favicon = {
