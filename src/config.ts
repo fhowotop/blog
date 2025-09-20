@@ -10,11 +10,6 @@ import { LinkPreset } from "./types/config";
 export const siteConfig: SiteConfig = {
 	title: "风绘的小窝",
 	subtitle: "欲买桂花同载酒，终不似，少年游",
-	// ICP 备案号，若为空则页脚不显示
-	icpRecord: "豫ICP备2025139441号",
-	// Site start date (ISO format). Optional — set this to show site uptime in footer.
-	// Example: "2025-09-20"
-	siteStartDate: "2025-07-28",
 	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345

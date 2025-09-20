@@ -5,64 +5,63 @@ import { url } from "../utils/url-utils";
 
 const currentYear = new Date().getFullYear();
 // Helper: compute uptime from startDate string (ISO) to now, return Chinese human-readable like "2年3月" or "5个月12天"
-// Helper: compute total days from startDate string (ISO) to now, return format like "已运行123天 (始于 2023-01-01)"
 function formatUptime(startDateStr: string | undefined) {
     if (!startDateStr) return null;
     const start = new Date(startDateStr);
     if (isNaN(start.getTime())) return null;
     const now = new Date();
 
-    // 计算总天数差
-    const timeDiff = now.getTime() - start.getTime();
-    const dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+    let days = now.getDate() - start.getDate();
 
-    // 格式化开始日期为 YYYY-MM-DD 格式
-    const formattedStartDate = start.toISOString().split('T')[0];
+    if (days < 0) {
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
+        months -= 1;
+    }
+    if (months < 0) {
+        months += 12;
+        years -= 1;
+    }
 
-    return `已运行${dayDiff}天 (始于 ${formattedStartDate})`;
-}
+    // helper: convert 0-99 to Chinese numerals (basic)
+    function toChinese(n: number) {
+        const map: Record<number, string> = {
+            0: "零",
+            1: "一",
+            2: "二",
+            3: "三",
+            4: "四",
+            5: "五",
+            6: "六",
+            7: "七",
+            8: "八",
+            9: "九",
+            10: "十",
+        };
+        if (n <= 10) return map[n];
+        if (n < 20) return `十${map[n - 10] || ""}`; // 11-19
+        const tens = Math.floor(n / 10);
+        const ones = n % 10;
+        return `${map[tens]}十${ones === 0 ? "" : map[ones]}`;
+    }
 
-let years = now.getFullYear() - start.getFullYear();
-let months = now.getMonth() - start.getMonth();
-let days = now.getDate() - start.getDate();
-
-if (days < 0) {
-    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
-    days += prevMonth.getDate();
-    months -= 1;
-}
-if (months < 0) {
-    months += 12;
-    years -= 1;
-}
-
-// helper: convert 0-99 to Chinese numerals (basic)
-function toChinese(n: number) {
-    const map: Record<number, string> = {
-        0: "零",
-        1: "一",
-        2: "二",
-        3: "三",
-        4: "四",
-        5: "五",
-        6: "六",
-        7: "七",
-        8: "八",
-        9: "九",
-        10: "十",
-    };
-    if (n <= 10) return map[n];
-    if (n < 20) return `十${map[n - 10] || ""}`; // 11-19
-    const tens = Math.floor(n / 10);
-    const ones = n % 10;
-    return `${map[tens]}十${ones === 0 ? "" : map[ones]}`;
-}
-
-let parts: string[] = [];
-if (years > 0) {
-    parts.push(`${toChinese(years)}年`);
-    if (months > 0) {
-        // include days; if days < 10, add '零' before Chinese day
+    const parts: string[] = [];
+    if (years > 0) {
+        parts.push(`${toChinese(years)}年`);
+        if (months > 0) {
+            // include days; if days < 10, add '零' before Chinese day
+            if (days > 0) {
+                parts.push(`${toChinese(months)}月${days < 10 ? `零${toChinese(days)}` : `${toChinese(days)}`}天`);
+            } else {
+                parts.push(`${toChinese(months)}月`);
+            }
+        } else if (days > 0) {
+            parts.push(`${toChinese(days)}天`);
+        }
+    } else if (months > 0) {
+        // no years, show months and days together
         if (days > 0) {
             parts.push(`${toChinese(months)}月${days < 10 ? `零${toChinese(days)}` : `${toChinese(days)}`}天`);
         } else {
@@ -71,19 +70,9 @@ if (years > 0) {
     } else if (days > 0) {
         parts.push(`${toChinese(days)}天`);
     }
-} else if (months > 0) {
-    // no years, show months and days together
-    if (days > 0) {
-        parts.push(`${toChinese(months)}月${days < 10 ? `零${toChinese(days)}` : `${toChinese(days)}`}天`);
-    } else {
-        parts.push(`${toChinese(months)}月`);
-    }
-} else if (days > 0) {
-    parts.push(`${toChinese(days)}天`);
-}
 
-if (parts.length === 0) return `0天`;
-return parts.join("");
+    if (parts.length === 0) return `0天`;
+    return parts.join("");
 }
 ---
 
