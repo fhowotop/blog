@@ -1,7 +1,7 @@
 # 风绘的小窝
 
 ---
-![Head Image](./src/assets/images/demo-banner.png)
+![Head Image](./src/assets/images/banner.png)
 
 >本仓库是「风绘的小窝」个人随记博客的存储库，基于[Fuwari](https://github.com/saicaca/fuwari)静态博客模版搭建，使用了Edgeone Pages提供部署支持！
 
