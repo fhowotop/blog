@@ -4,6 +4,34 @@ import { profileConfig, siteConfig } from "../config";
 import { url } from "../utils/url-utils";
 
 const currentYear = new Date().getFullYear();
+// Helper: compute uptime from startDate string (ISO) to now, return Chinese human-readable like "2年3月" or "5个月12天"
+function formatUptime(startDateStr: string | undefined) {
+    if (!startDateStr) return null;
+    const start = new Date(startDateStr);
+    if (isNaN(start.getTime())) return null;
+    const now = new Date();
+
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+    let days = now.getDate() - start.getDate();
+
+    if (days < 0) {
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
+        months -= 1;
+    }
+    if (months < 0) {
+        months += 12;
+        years -= 1;
+    }
+
+    const parts: string[] = [];
+    if (years > 0) parts.push(`${years}年`);
+    if (months > 0) parts.push(`${months}月`);
+    if (years === 0 && months === 0 && days > 0) parts.push(`${days}天`);
+    if (parts.length === 0) return `0天`;
+    return parts.join("");
+}
 ---
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
@@ -14,6 +42,12 @@ const currentYear = new Date().getFullYear();
         {siteConfig.icpRecord && (
             <>
             <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={`https://beian.miit.gov.cn/#/Integrated/index?record=${encodeURIComponent(siteConfig.icpRecord)}`}>{siteConfig.icpRecord}</a>
+            <br />
+            </>
+        )}
+        {siteConfig.siteStartDate && (
+            <>
+            <span class="text-sm">本站已运行 {formatUptime(siteConfig.siteStartDate)}</span>
             <br />
             </>
         )}
