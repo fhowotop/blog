@@ -1,5 +1,16 @@
-﻿# Friends
+﻿# 友人帐
 
-Edit `src/_data/friends.json` to add sites.
+### 添加友链的一些小要求
+- 你的站点需有不少于五篇的原创文章
+- 不接受免费域名的友链添加
+- 你的站点需运行60天以上
+- 你的站点需在中国大陆能够正常访问，并且不可含有违法内容
+- 你的站点须部署SSL证书即HTTPS
 
-You can also edit `src/content/spec/friends.md` to Change text here.
+#### 友链格式
+```
+		"siteTitle": "风绘的小窝",
+		"siteDesc": "欲买桂花同载酒，终不似，少年游",
+		"siteUrl": "https://blog.fhowo.top",
+		"siteIcon": "https://q4.qlogo.cn/g?b=qq&nk=3986554524&s=640"
+```
