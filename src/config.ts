@@ -82,7 +82,7 @@ export const profileConfig: ProfileConfig = {
 		},
 		{
 			name: "AI猫娘",
-			icon: "arcticons:deepseek",
+			icon: "arcticons:nekobox",
 			url: "https://chatbot.fhowo.top",
 		},
 	],
