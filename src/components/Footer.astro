@@ -12,8 +12,8 @@ const currentYear = new Date().getFullYear();
 <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6">
     <div class="transition text-50 text-sm text-center">
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://beian.miit.gov.cn/">豫ICP备2025139441号</a><br>
-        <span class="text-[var(--primary)]">
-            本站已运行 {Math.floor((new Date() - new Date('2025-08-08')) / (1000 * 60 * 60 * 24))} 天
+        <span>
+            已运行 {Math.floor((new Date().getTime() - new Date('2025-08-08').getTime()) / (1000 * 60 * 60 * 24))} 天
         </span><br>
         &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('rss.xml')}>RSS</a> /
