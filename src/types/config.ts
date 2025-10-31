@@ -35,6 +35,9 @@ export type SiteConfig = {
 		depth: 1 | 2 | 3;
 	};
 
+	// 站点备案号（可选），例如 "粤ICP备00000000号"，在页脚显示
+	beian?: string;
+
 	favicon: Favicon[];
 };
 

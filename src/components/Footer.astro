@@ -1,6 +1,6 @@
 ---
 
-import { profileConfig } from "../config";
+import { profileConfig, siteConfig } from "../config";
 import { url } from "../utils/url-utils";
 
 const currentYear = new Date().getFullYear();
@@ -18,4 +18,9 @@ const currentYear = new Date().getFullYear();
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a>
     </div>
+    {siteConfig.beian ? (
+        <div class="transition text-50 text-sm text-center mt-2">
+            <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://beian.miit.gov.cn/">{siteConfig.beian}</a>
+        </div>
+    ) : null}
 </div>
