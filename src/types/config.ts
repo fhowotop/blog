@@ -38,6 +38,9 @@ export type SiteConfig = {
 	// 站点备案号（可选），例如 "粤ICP备00000000号"，在页脚显示
 	beian?: string;
 
+	// 站点起始运行日期（可选），格式为 YYYY-MM-DD，页脚会显示已运行天数（当配置有效时）
+	startDate?: string;
+
 	favicon: Favicon[];
 };
 

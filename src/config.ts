@@ -34,6 +34,9 @@ export const siteConfig: SiteConfig = {
 	// 可在此处配置页脚备案号（留空则不显示）
 	beian: "豫ICP备2025139441号",
 
+	// 站点起始运行日期（格式 YYYY-MM-DD），用于在页脚显示已运行天数；留空则不显示
+	startDate: "2025-08-08",
+
 	favicon: [
 		// Leave this array empty to use the default favicon
 		// {
