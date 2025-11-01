@@ -4,22 +4,6 @@ import { profileConfig, siteConfig } from "../config";
 import { url } from "../utils/url-utils";
 
 const currentYear = new Date().getFullYear();
-// 计算已运行天数（含首日），当 `siteConfig.startDate` 为 YYYY-MM-DD 时生效
-const runningDays = (() => {
-	const s = siteConfig.startDate;
-	if (!s) return null;
-	const parts = s.split("-").map((v) => Number(v));
-	if (parts.length !== 3 || parts.some((n) => Number.isNaN(n))) return null;
-	const startUtc = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
-	const now = new Date();
-	const todayUtc = new Date(
-		Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
-	);
-	const msPerDay = 24 * 60 * 60 * 1000;
-	const diff =
-		Math.floor((todayUtc.getTime() - startUtc.getTime()) / msPerDay) + 1;
-	return Number.isFinite(diff) && diff >= 0 ? diff : null;
-})();
 ---
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
@@ -36,10 +20,7 @@ const runningDays = (() => {
     </div>
     {siteConfig.beian ? (
         <div class="transition text-50 text-sm text-center mt-2">
-            <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://beian.miit.gov.cn/">{siteConfig.beian}</a>
+            <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://beian.miit.gov.cn/">{siteConfig.beian.replace(/\s+/g, '')}</a>
         </div>
     ) : null}
-	{runningDays !== null ? (
-		<div class="transition text-50 text-sm text-center mt-2">已运行 {runningDays} 天</div>
-	) : null}
 </div>
