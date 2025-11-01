@@ -1,8 +1,26 @@
 [
 	{
-		"siteTitle": "Lorem Ipsum",
-		"siteDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"siteUrl": "https://github.com/saicaca/fuwari/",
-		"siteIcon": "https://raw.githubusercontent.com/saicaca/fuwari/refs/heads/main/src/assets/images/demo-avatar.png"
+		"siteTitle": "风绘的小窝",
+		"siteDesc": "欲买桂花同载酒，终不似，少年游",
+		"siteUrl": "https://blog.fhowo.top",
+		"siteIcon": "https://q4.qlogo.cn/g?b=qq&nk=3986554524&s=640"
+	},
+	{
+		"siteTitle": "NorthZero",
+		"siteDesc": "o_O",
+		"siteUrl": "https://www.nzdnzd.top/",
+		"siteIcon": "https://nzdnzd.top/favicon-512x512.png"
+	},
+	{
+		"siteTitle": "susu",
+		"siteDesc": "暂无描述 (QQBOT丛雨丸开发者)",
+		"siteUrl": "https://susu.icu",
+		"siteIcon": "https://q4.qlogo.cn/g?b=qq&nk=1503366755&s=640"
+	},
+	{
+		"siteTitle": "午夜的Blog",
+		"siteDesc": "用代码表达言语的魅力，用代码书写山河的壮丽。",
+		"siteUrl": "https://www.wuye2004.top",
+		"siteIcon": "https://q4.qlogo.cn/g?b=qq&nk=1343394737&s=640"
 	}
 ]
