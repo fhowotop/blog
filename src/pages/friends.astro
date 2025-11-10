@@ -1,7 +1,7 @@
 ---
-import { siteConfig } from "../config";
 import { getEntry, render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
+import { siteConfig } from "../config";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
@@ -20,19 +20,26 @@ if (!friendsPost) {
 const { Content } = await render(friendsPost);
 const items = [
 	{
-		title: "Astro",
-		imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
-		desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
-		siteurl: "https://github.com/withastro/astro",
-		tags: ["Framework"],
+		title: "NorthZero",
+		imgurl: "https://nzdnzd.top/favicon-512x512.png",
+		desc: "o_O",
+		siteurl: "https://blog.fhowo.top",
+		tags: ["Blog"],
 	},
 	{
-		title: "Mizuki Docs",
+		title: "susu",
 		imgurl:
 			"http://q.qlogo.cn/headimg_dl?dst_uin=3231515355&spec=640&img_type=jpg",
-		desc: "Mizuki User Manual",
+		desc: "暂无描述",
 		siteurl: "https://docs.mizuki.mysqil.com",
-		tags: ["Docs"],
+		tags: ["Blog", "susu事务所"],
+	},
+	{
+		title: "午夜的Blog",
+		imgurl: "https://q4.qlogo.cn/g?b=qq&nk=1343394737&s=640",
+		desc: "用代码表达言语的魅力，用代码书写山河的壮丽。",
+		siteurl: "https://www.wuye2004.top",
+		tags: ["Blog"],
 	},
 ];
 
