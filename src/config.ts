@@ -46,7 +46,7 @@ export const siteConfig: SiteConfig = {
 	// 顶栏标题配置
 	navbarTitle: {
 		// 顶栏标题文本
-		text: "FHOWO",
+		text: "风绘的小窝",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
 		icon: "assets/home/home.png",
 	},
@@ -218,7 +218,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	},
 	zIndex: -1, // 层级，确保壁纸在背景层
 	opacity: 0.8, // 壁纸透明度
-	blur: 1, // 背景模糊程度
+	blur: 5, // 背景模糊程度
 };
 
 export const navBarConfig: NavBarConfig = {
