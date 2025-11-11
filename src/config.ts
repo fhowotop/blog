@@ -232,6 +232,12 @@ export const navBarConfig: NavBarConfig = {
 			icon: "material-symbols:link",
 			children: [
 				{
+					name: "主站",
+					url: "https://fhowo.top",
+					external: true,
+					icon: "mdi:home",
+				},
+				{
 					name: "GitHub",
 					url: "https://github.com/fhowotop",
 					external: true,
