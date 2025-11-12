@@ -306,19 +306,14 @@ export const profileConfig: ProfileConfig = {
 	},
 	links: [
 		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/3546713098816154",
-		},
-		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/fhowotop",
 		},
 		{
-			name: "Telegram",
-			icon: "fa6-brands:telegram",
-			url: "https://t.me/fhowo",
+			name: "Email",
+			icon: "mingcute:mail-fill",
+			url: "mailto:me@fhowo.top",
 		},
 	],
 };
