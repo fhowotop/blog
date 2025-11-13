@@ -1,4 +1,4 @@
-![封面](README.png)
+![封面](/README.png)
 
 一个使用[astro](https://astro.build/)框架构建，主题为[Mizuki](https://github.com/matsuzaka-yuki/Mizuki)的静态博客。
 
