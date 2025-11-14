@@ -88,13 +88,8 @@ export const siteConfig: SiteConfig = {
 	banner: {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
-			desktop: [
-				"/assets/desktop-banner/d1.png",
-			], // 桌面横幅图片
-			mobile: [
-				"/assets/mobile-banner/m1.png",
-				"/assets/mobile-banner/m2.png",
-			], // 移动横幅图片
+			desktop: ["/assets/desktop-banner/d1.png"], // 桌面横幅图片
+			mobile: ["/assets/mobile-banner/m1.png", "/assets/mobile-banner/m2.png"], // 移动横幅图片
 		}, // 使用本地横幅图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
@@ -183,10 +178,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 			"/assets/desktop-banner/d4.png",
 			"/assets/desktop-banner/d5.png",
 		], // 桌面横幅图片
-		mobile: [
-			"/assets/mobile-banner/m1.png",
-			"/assets/mobile-banner/m2.png",
-		], // 移动横幅图片
+		mobile: ["/assets/mobile-banner/m1.png", "/assets/mobile-banner/m2.png"], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
@@ -225,6 +217,12 @@ export const navBarConfig: NavBarConfig = {
 					url: "https://space.bilibili.com/3546713098816154",
 					external: true,
 					icon: "fa6-brands:bilibili",
+				},
+				{
+					name: "AINeko·雨霁",
+					url: "https://aineko.fhowo.top",
+					external: true,
+					icon: "arcticons:nekobox",
 				},
 			],
 		},
@@ -516,7 +514,8 @@ export const widgetConfigs = {
 
 export const umamiConfig = {
 	enabled: true, // 是否显示Umami统计
-	apiKey: import.meta.env.UMAMI_API_KEY || "api_TxJr1qgBX9Zv6Je17wefm72wRrw1wAgm", // API密钥优先从环境变量读取，否则使用配置文件中的值
+	apiKey:
+		import.meta.env.UMAMI_API_KEY || "api_TxJr1qgBX9Zv6Je17wefm72wRrw1wAgm", // API密钥优先从环境变量读取，否则使用配置文件中的值
 	baseUrl: "https://api.umami.is", // Umami Cloud API地址
 	scripts: `
 <script defer src="https://analytics.umami.is/script.js" data-website-id="71aa6fd0-eabe-4de1-980f-1a9fe1d4454b"></script>
