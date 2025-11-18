@@ -20,77 +20,38 @@ export interface Project {
 
 export const projectsData: Project[] = [
 	{
-		id: "mizuki-blog",
-		title: "Mizuki Blog Theme",
+		id: "blog",
+		title: "建设我的Blog",
 		description:
-			"Modern blog theme developed based on the Astro framework, supporting multilingual, dark mode, and responsive design features.",
+			"基于Astro框架的个人博客主题，支持多语言、暗黑模式、响应式设计等功能。",
 		image: "",
-		category: "web",
+		category: "web",//mobile or other
 		techStack: ["Astro", "TypeScript", "Tailwind CSS", "Svelte"],
 		status: "completed",
-		liveDemo: "https://blog.example.com",
-		sourceCode: "https://github.com/example/mizuki", // 更改为GitHub链接
-		visitUrl: "https://blog.example.com", // 添加前往项目链接
-		startDate: "2024-01-01",
-		endDate: "2024-06-01",
+		liveDemo: "https://blog.fhowo.top",
+		sourceCode: "https://github.com/fhowotop/blog", // 更改为GitHub链接
+		visitUrl: "https://blog.fhowo.top", // 添加前往项目链接
+		startDate: "2025-08-08",
+		endDate: "2025-08-08",
 		featured: true,
 		tags: ["Blog", "Theme", "Open Source"],
 	},
 	{
-		id: "portfolio-website",
-		title: "Personal Portfolio",
+		id: "aineko_yuji",
+		title: "AINeko·雨霁",
 		description:
-			"Personal portfolio website showcasing project experience and technical skills.",
+			"你将与名为雨霁的猫娘少女对话，请好好对待她喵~",
 		image: "",
 		category: "web",
-		techStack: ["React", "Next.js", "TypeScript", "Framer Motion"],
+		techStack: ["Next.js"],
 		status: "completed",
-		liveDemo: "https://portfolio.example.com",
-		sourceCode: "https://github.com/example/portfolio",
-		visitUrl: "https://portfolio.example.com", // 添加前往项目链接
-		startDate: "2023-09-01",
-		endDate: "2023-12-01",
-		featured: true,
-		tags: ["Portfolio", "React", "Animation"],
-	},
-	{
-		id: "task-manager-app",
-		title: "Task Manager App",
-		description:
-			"Cross-platform task management application supporting team collaboration and project management.",
-		image: "",
-		category: "mobile",
-		techStack: ["React Native", "TypeScript", "Redux", "Firebase"],
-		status: "in-progress",
-		startDate: "2024-03-01",
-		tags: ["Mobile", "Productivity", "Team Collaboration"],
-	},
-	{
-		id: "data-visualization-tool",
-		title: "Data Visualization Tool",
-		description:
-			"Data visualization tool supporting multiple chart types and interactive analysis.",
-		image: "",
-		category: "web",
-		techStack: ["Vue.js", "D3.js", "TypeScript", "Node.js"],
-		status: "completed",
-		liveDemo: "https://dataviz.example.com",
-		visitUrl: "https://dataviz.example.com", // 添加前往项目链接
-		startDate: "2023-06-01",
-		endDate: "2023-11-01",
-		tags: ["Data Visualization", "Analytics", "Charts"],
-	},
-	{
-		id: "e-commerce-platform",
-		title: "E-commerce Platform",
-		description:
-			"Full-stack e-commerce platform including user management, product management, and order processing features.",
-		image: "",
-		category: "web",
-		techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-		status: "planned",
-		startDate: "2024-07-01",
-		tags: ["E-commerce", "Full Stack", "Payment Integration"],
+		liveDemo: "https://aineko.fhowo.top",
+		sourceCode: "https://github.com/fhowotop/AI-Neko",
+		visitUrl: "https://aineko.fhowo.top", // 添加前往项目链接
+		startDate: "2025-10-25",
+		endDate: "2025-10-26",
+		featured: false,
+		tags: ["Portfolio", "AI","NekoChat"],
 	},
 ];
 
